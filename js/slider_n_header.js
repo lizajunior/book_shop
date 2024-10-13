@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function pageLoaded() {
     });
   }
 
+  //header menu
   function initGenreListItem() {
     genreItems.forEach((genreItem, index) => {
       genreItem.addEventListener('click', () => {
@@ -50,12 +51,12 @@ document.addEventListener('DOMContentLoaded', function pageLoaded() {
     images.forEach((image, index) => {
       const dot = `
         <div class="slider__dots-item n${index} ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`;
-      sliderDots.innerHTML += dot;
+      sliderDots.innerHTML += dot; //создаем точку для каждого img и добавляем в общий div
     });
 
     sliderDots.querySelectorAll('.slider__dots-item').forEach(dot => {
       dot.addEventListener('click', function () {
-        moveSlider(+this.dataset.index);
+        moveSlider(+this.dataset.index); //передвижение слайдов с помощью точек
       });
     });
   }

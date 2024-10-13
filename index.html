@@ -7,11 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/slider.css">
   <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="styles/aside.css">
-  <link rel="stylesheet" href="styles/book-menu.css">
+  <link rel="stylesheet" href="styles/section_1/header.css">
+  <link rel="stylesheet" href="styles/section_1/link-cards.css">
+  <link rel="stylesheet" href="styles/section_1/slider.css">
+  <link rel="stylesheet" href="styles/section_2/aside.css">
+  <link rel="stylesheet" href="styles/section_2/book-menu.css">
 </head>
 <body>
   <header class="header">
@@ -31,12 +32,19 @@
     </div>
 
     <div class="header__right-section">
-      <a href="#"><img class="user-account-btn" src="icons/user.svg"/></a>
-      <a href="#"><img class="search-btn" src="icons/search-button.svg"/></a>
+      <a href="#">
+        <img class="user-account-btn" src="icons/user.svg"/>
+        <div class="tooltip">Home</div>
+      </a>
+      <a href="#" class="tooltip-container">
+        <img class="search-btn" src="icons/search-button.svg"/>
+        <div class="tooltip">Search</div>
+      </a>
       <a href="#">
         <div class="added-products-container">
           <img class="shopping-cart-btn" src="icons/shopping-bag.svg"/>
           <div class="products-count"></div>
+          <div class="tooltip">Search</div>
         </div>
       </a>
     </div>
@@ -45,10 +53,25 @@
   <main class="main">
 
     <section class="main__first-section">
+      
+      <div class="link__cards">
+        <a href="#">
+          <div class="link__violet-card">
+            <span class="card-text">Change old book on new</span>
+          </div>
+        </a>
+        <a href="#">
+          <div class="link__pink-card">
+            <span class="card-text">top 100 books 2022</span>
+          </div>
+        </a>
+      </div>
+
       <div class="slider">
         <div class="slider__images"></div>
       </div>
       <div class="slider__dots"></div>
+
     </section>
 
     <section class="main__second-section">
