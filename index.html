@@ -32,7 +32,7 @@
     </div>
 
     <div class="header__right-section">
-      <a href="#">
+      <a href="#" class="tooltip-container">
         <img class="user-account-btn" src="icons/user.svg"/>
         <div class="tooltip">Home</div>
       </a>
@@ -40,11 +40,11 @@
         <img class="search-btn" src="icons/search-button.svg"/>
         <div class="tooltip">Search</div>
       </a>
-      <a href="#">
+      <a href="#" class="tooltip-container">
         <div class="added-products-container">
           <img class="shopping-cart-btn" src="icons/shopping-bag.svg"/>
           <div class="products-count"></div>
-          <div class="tooltip">Search</div>
+          <div class="tooltip">Cart</div>
         </div>
       </a>
     </div>
@@ -99,115 +99,19 @@
         </nav>
       </aside>
 
-      <div class="articles">
-
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-      
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="article-book">
-          <div class="book__pic">
-            <img class="book__portrait" src="images/example_title-book.png" alt="book-portrait"/>
-          </div>
-          <div class="book__info-container">
-            <div class="book__info">
-              <p class="book__author">Kevin kwan</p>
-              <h3 class="book__title">Crazy rich asians</h3>
-              <div></div>
-              <p class="book__description">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-              <p class="book__price">$4.99</p>
-              <button class="add-to-bag">Buy now</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="articles"></div>
     </section>
 
-    <div class="btn__load-container">
+    <div class="result-wrapper">
       <button class="btn__load ">load more</button>
+      <div class="result-output"></div>
     </div>
     
     
   </main>
 </body>
-<script src="js/slider_n_header.js"></script>
-<script src="js/addBtn_n_count.js"></script>
+<script type="module" src="js/slider_n_header.js"></script>
+<script type="module" src="js/addBtn_n_count.js"></script>
+<script type="module" src="js/bookApi.js"></script>
 
 </html>

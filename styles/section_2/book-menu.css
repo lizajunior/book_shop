@@ -39,6 +39,7 @@
 }
 
 .book__info{
+  width:174px;
   margin-left:36px;
   position:absolute;
   top:35%;
@@ -109,7 +110,7 @@
   border: 1px solid rgba(238, 237, 245, 1);
 }
 
-.btn__load-container{
+.result-wrapper{
   display:flex;
   justify-content: center;
   align-items: center;

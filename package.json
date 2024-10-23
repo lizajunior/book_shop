@@ -1,0 +1,15 @@
+{
+  "name": "bookshop_project",
+  "version": "1.0.0",
+  "description": "list of books",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "'https://github.com/lizajunior/book_shop'"
+  },
+  "author": "liza djundiet",
+  "license": "ISC"
+}

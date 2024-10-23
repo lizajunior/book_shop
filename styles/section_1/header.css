@@ -54,7 +54,7 @@
   position: relative; /* Позволяет позиционировать тултип */
 }
 
-.search-btn .tooltip{
+.tooltip{
   position:absolute;
   background-color: gray;
   color:white;
@@ -63,11 +63,12 @@
   font-size:12px;
   bottom:-20px;
   opacity: 0;
-  transition: opacity 0.15s;
+  transform:translateX(-50%);
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;/*элемент не сможет быть кликабельным*/
 }
 
 .tooltip-container:hover .tooltip {
-  display: block; /* Показываем тултип при наведении */
   opacity: 1; /* Делаем видимым */
 }
 
