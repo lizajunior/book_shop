@@ -11,5 +11,8 @@
     "url": "'https://github.com/lizajunior/book_shop'"
   },
   "author": "liza djundiet",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
 }

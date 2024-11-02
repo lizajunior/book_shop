@@ -1,0 +1,46 @@
+@import "variables";
+
+.aside{
+  width:416px;
+  height:710px;
+  background-color: rgba(239, 238, 246, 1);
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.nav__genre-book{
+  text-align: center;
+}
+
+.book-genre-list{
+  list-style: none;
+  line-height:19.5px;
+  width: 100%;
+}
+
+.genre-item{
+  text-align: left;
+  font-size: 14px;
+  padding: 10px 0;
+  position: relative; /* Для добавления кружочка через ::before */
+  cursor:pointer;
+}
+
+.genre-active{
+  font-size:16px;
+  font-weight: 700;
+}
+
+.genre-active::before {
+  content: '';
+  position: absolute;
+  left: -20px; /* Расположение слева от текста */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px; /* Диаметр кружочка */
+  height: 8px;
+  background-color: $genre-active-dots-color; /* Цвет кружочка */
+  border-radius: 50%; /* Делает элемент кругом */
+}
+

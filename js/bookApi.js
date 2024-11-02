@@ -1,5 +1,3 @@
-export { apiKey, apiUrl, fetchBooks};
-
 const apiKey='AIzaSyCTdVNdNjdYLWLRMEZaueMFT24UCra-18I';
 const apiUrl = `https://www.googleapis.com/books/v1/volumes?q="subject:Business"&key=${apiKey}&printType=books&startIndex=0&maxResults=6&langRestrict=en`;
 //maxResults=6 - благодаря этому параметру на экране отображаются максимум 6 книг
@@ -58,3 +56,7 @@ btnLoadMore.addEventListener('click', () => {
 
   fetchBooks(newApiUrl);
 });
+
+fetchBooks(apiUrl);
+
+export { apiKey, apiUrl, fetchBooks};
