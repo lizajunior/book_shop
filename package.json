@@ -13,6 +13,7 @@
   "author": "liza djundiet",
   "license": "ISC",
   "dependencies": {
-    "pug": "^3.0.3"
+    "pug": "^3.0.3",
+    "sass": "^1.80.6"
   }
 }
