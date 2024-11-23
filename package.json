@@ -4,7 +4,8 @@
   "description": "list of books",
   "main": "index.js",
   "scripts": {
-    "test": "run"
+    "test": "run",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
