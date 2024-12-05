@@ -1,5 +1,3 @@
-@import "../variables";
-
 .aside{
   width:416px;
   height:710px;
@@ -40,7 +38,7 @@
   transform: translateY(-50%);
   width: 8px; /* Диаметр кружочка */
   height: 8px;
-  background-color: $genre-active-dots-color; /* Цвет кружочка */
+  background-color: rgb(117, 106, 211); /* Цвет кружочка */
   border-radius: 50%; /* Делает элемент кругом */
 }
 

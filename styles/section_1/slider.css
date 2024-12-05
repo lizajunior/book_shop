@@ -1,5 +1,3 @@
-@import "../variables";
-
 .slider{
   display:flex;
   margin:0 auto;
@@ -38,7 +36,7 @@
 .slider__dots-item {
   width: 10px;
   height: 10px;
-  background: $slider-dots-default-color;
+  background: rgba(239, 238, 246, 1);
   border-radius: 50%;
   margin: 10px 5px;
   cursor: pointer;
@@ -47,7 +45,7 @@
 
 .slider__dots-item:hover, 
 .slider__dots-item.active {
-  background: $slider-dots-active-color;
+  background: rgba(158, 152, 220, 1);
 }
 
 .text-active{

@@ -1,5 +1,3 @@
-@import "../variables";
-
 .main__second-section{
   display:flex;
   margin-top:50px;
@@ -30,7 +28,7 @@
   height:300px;
   background-size: cover;
   background-position: center ;
-  box-shadow: $books-shadow;
+  box-shadow: 0px 20px 20px -10px rgba(0, 0, 0, 0.2);
 }
 
 .book__info-container{
@@ -88,28 +86,28 @@
   vertical-align: middle;
   font-size:8px;
   text-transform: uppercase;
-  color:$btns-color;
+  color:rgba(76, 61, 178, 1);
   background-color: white;
-  border: $btns-border-color;
+  border: 1px solid rgba(76, 61, 178, 1);
   outline: none;
   box-shadow: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .add-to-bag:hover{
-  color: $btns-color-active;
-  background-color: $btns-background-color-active;
-  border: $btns-border-color-active;
+  color: white;
+  background-color: rgba(185, 174, 252, 0.64);
+  border: 1px solid rgba(238, 237, 245, 1);
 }
 
 .add-to-bag:active{
-  color:$btns-color-active;
-  background-color: $btns-background-color-active;
+  color:white;
+  background-color: rgba(185, 174, 252, 0.64);
   opacity:0.5;
 }
 
 .add-to-bag-active{
-  border: $btns-border-color-active;
+  border: 1px solid rgba(238, 237, 245, 1);
 }
 
 .result-wrapper{

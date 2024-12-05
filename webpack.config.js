@@ -10,25 +10,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/, // Обработка файлов .scss
-        use: [
-          MiniCssExtractPlugin.loader, // вместо style-loader используем этот плагин стили добавляются в DOM, стили будут вынесены в отдельные CSS-файлы, которые подключаются через <link>
-          'css-loader',   // Обрабатывает CSS
-          'sass-loader',  // Компилирует Sass в CSS
-        ],
-      },
-
-      {
         test: /\.js$/, // Обработка .js файлов
         exclude: /node_modules/,
         use: 'babel-loader', // Если нужен Babel для транспиляции
       },
-      
+
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
+          MiniCssExtractPlugin.loader,// Извлекает CSS в отдельный файл
+          'css-loader',// Обрабатывает CSS-файлы (импорты, минификация)
         ],
       },
     ],

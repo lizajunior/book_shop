@@ -18,7 +18,21 @@ function createBookTemplate(book){
         <div class="book__info">
           <p class="book__author">${book.volumeInfo.authors || 'Unknown Author'}</p>
           <h3 class="book__title">${book.volumeInfo.title || 'No Title'}</h3>
-          <div class="book__rating">${book.volumeInfo || 'No Rating'}</div>
+
+          <div class="rating">
+            <div class="rating__body">
+              <div class="rating__active"></div>
+              <div class="rating__items">
+                <input type="radio" class="rating__item" value="1" name="rating">
+                <input type="radio" class="rating__item" value="2" name="rating">
+                <input type="radio" class="rating__item" value="3" name="rating">
+                <input type="radio" class="rating__item" value="4" name="rating">
+                <input type="radio" class="rating__item" value="5" name="rating">
+              </div>
+              <div class="rating__value"></div>
+            </div>
+          </div>
+          
           <p class="book__description">${book.volumeInfo.infoLink || 'No description available'}</p>
           <p class="book__price">${book.volumeInfo.pageCount || 'Price not available'}$</p>
           <button class="add-to-bag">Buy now</button>
