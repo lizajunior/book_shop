@@ -1,8 +1,10 @@
-const ratings = document.querySelectorAll('.rating');
+document.addEventListener('DOMContentLoaded', () => {
+  const ratings = document.querySelectorAll('.rating');
+  if (ratings.length > 0) {
+    initRatings();
+  }
+});
 
-if (ratings.length > 0) {
-  initRatings();
-}
 
 //основная функция
 function initRatings(){
@@ -53,3 +55,4 @@ function initRatings(){
     }
   }
 }
+

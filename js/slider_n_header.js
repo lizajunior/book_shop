@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function pageLoaded() {
   let intervalId;
 
   initMenuItemLink();
-  initGenreListItem();
   initImages();
   initDots();
   moveSlider(currentIndex);
@@ -24,16 +23,6 @@ document.addEventListener('DOMContentLoaded', function pageLoaded() {
       menuItem.addEventListener('click', () => {
         menuItems.forEach(m => m.classList.remove('text-active'));
         menuItem.classList.add('text-active');
-      });
-    });
-  }
-
-  //header menu
-  function initGenreListItem() {
-    genreItems.forEach((genreItem, index) => {
-      genreItem.addEventListener('click', () => {
-        genreItems.forEach(g => g.classList.remove('genre-active'));
-        genreItem.classList.add('genre-active');
       });
     });
   }
