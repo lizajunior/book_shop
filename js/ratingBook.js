@@ -1,13 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const ratings = document.querySelectorAll('.rating');
-  if (ratings.length > 0) {
-    initRatings();
-  }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+  
+//   if (ratings.length > 0) {
+//     initRatings();
+//   }
+// });
 
 
 //основная функция
-function initRatings(){
+ export function initRatings(){
+  const ratings = document.querySelectorAll('.rating');
   let ratingActive, ratingValue;
   //бегаем по всем рейтингам на странице
   for(let i = 0; i < ratings.length; i++){
@@ -55,4 +56,6 @@ function initRatings(){
     }
   }
 }
+
+
 

@@ -1,6 +1,8 @@
+import {initRatings} from './ratingBook.js';
+import {changedStyleAddBtn} from './addBtn_n_count.js';
 const apiKey='AIzaSyCTdVNdNjdYLWLRMEZaueMFT24UCra-18I';
 
-//maxResults=6 - благодаря этому параметру на экране отображаются максимум 6 книг
+const maxResult = 6 // - благодаря этому параметру на экране отображаются максимум 6 книг
 //q="subject:Business" — поисковый запрос, ограничивающий результаты книгами по теме бизнеса.
 let startIndex = 0 // —  начальный индекс для получения книг. Указав 0, запрашиваются первые результаты.
 let selectCategory = 'Business';//по умолчанию
@@ -8,8 +10,10 @@ let selectCategory = 'Business';//по умолчанию
 
 const articleDiv = document.querySelector('.articles');
 const btnLoadMore = document.querySelector('.btn__load'); 
+const localStr = JSON.parse(localStorage.getItem('cart')) ?? [];
 
 function createBookTemplate(book){
+  console.log(localStr);
   return `
     <div class="article-book">
       <div class="book__pic">
@@ -34,9 +38,11 @@ function createBookTemplate(book){
             </div>
           </div>
 
-          <p class="book__description">${book.volumeInfo.infoLink || 'No description available'}</p>
-          <p class="book__price">${book.volumeInfo.pageCount || 'Price not available'}$</p>
-          <button class="add-to-bag">Buy now</button>
+          <p class="book__description">${book.volumeInfo.description || 'No description available'}</p>
+          <p class="book__price"> ${book.volumeInfo.pageCount || 'Price not available'}$</p>
+          <button class="add-to-bag ${localStr.find(item => item.id === book.id) ? 'add-to-bag-active':''}" data-id="${book.id}">
+          ${localStr.find(item => item.id === book.id) ? 'in the cart' : 'buy now'}
+          </button>
         </div>
       </div>
     </div>
@@ -63,7 +69,7 @@ document.addEventListener('click',(event) => {
 });
 
 function fetchBooks(url) {
-  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q="subject:${selectCategory}"&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict=en`;
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q="subject:${selectCategory}"&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=${maxResult}&langRestrict=en`;
   return fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
@@ -79,12 +85,12 @@ function fetchBooks(url) {
 }
 
 btnLoadMore.addEventListener('click', () => {
-  const startIndex = document.querySelectorAll('.article-book').length;
-  const newApiUrl = `https://www.googleapis.com/books/v1/volumes?q="subject:Business"&key=${apiKey}&printType=books&startIndex=${startIndex}&maxResults=6&langRestrict=en`;
-
+  startIndex += 6;
   fetchBooks();
 });
 
-fetchBooks();
-
+document.addEventListener('DOMContentLoaded',()=>{
+  fetchBooks();
+  changedStyleAddBtn();
+})
 export {fetchBooks};

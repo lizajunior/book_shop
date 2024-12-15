@@ -1,4 +1,5 @@
-function addToCart(book) {
+ export function addToCart(book) {
+
   if (!book || !book.id || !book.title || !book.price) {
     console.error('Некорректный объект книги');
     return;
@@ -17,11 +18,11 @@ function addToCart(book) {
   renderCart(); // Обновляем корзину на странице
 }
 
-function getCart() {
+ export function getCart() {
   return JSON.parse(localStorage.getItem('cart')) || [];
 }
 
-function removeFromCart(bookId) {
+export function removeFromCart(bookId) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart = cart.filter(item => item.id !== bookId);
   localStorage.setItem('cart', JSON.stringify(cart));
